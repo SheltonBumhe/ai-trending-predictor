@@ -1,0 +1,10 @@
+com/trendpredictor/JwtUtil.class
+com/trendpredictor/SecurityConfig.class
+com/trendpredictor/User.class
+com/trendpredictor/Application.class
+com/trendpredictor/AuthController.class
+com/trendpredictor/UserRepository.class
+com/trendpredictor/OAuthRequest.class
+com/trendpredictor/AuthService.class
+com/trendpredictor/LoginRequest.class
+com/trendpredictor/RegisterRequest.class
