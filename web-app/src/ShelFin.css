@@ -1,0 +1,83 @@
+/* Background and overlay */
+
+.shelfin-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/shelfin-bg.jpg') center/cover no-repeat;
+    z-index: 0;
+    filter: blur(2px) brightness(0.7);
+}
+
+.shelfin-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.6);
+    z-index: 1;
+}
+
+.shelfin-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Animations */
+
+.shelfin-fade-enter {
+    opacity: 0;
+}
+
+.shelfin-fade-enter-active {
+    opacity: 1;
+    transition: opacity 400ms;
+}
+
+.shelfin-fade-exit {
+    opacity: 1;
+}
+
+.shelfin-fade-exit-active {
+    opacity: 0;
+    transition: opacity 400ms;
+}
+
+
+/* Buttons and inputs */
+
+.shelfin-content button,
+.shelfin-content input,
+.shelfin-content select {
+    margin: 0 6px 12px 0;
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid #1976d2;
+    font-size: 1rem;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.shelfin-content button:hover,
+.shelfin-content input:focus,
+.shelfin-content select:focus {
+    border-color: #004ba0;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.12);
+    outline: none;
+}
+
+.shelfin-content table {
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+}

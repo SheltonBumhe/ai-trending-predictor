@@ -1,0 +1,32 @@
+name: ML CI/CD
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-train-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: |
+          cd ml-engine
+          pip install -r requirements.txt
+      - name: Run pipeline
+        run: |
+          cd ml-engine
+          python pipeline.py
+      - name: Run tests (optional)
+        run: echo "Add your tests here!"
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: ./ml-engine
+          push: false
+      - name: Deploy (manual step)
+        run: echo "Deploy your Docker image to your server or cloud provider." 

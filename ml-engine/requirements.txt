@@ -1,0 +1,10 @@
+pandas
+scikit-learn
+xgboost
+optuna
+mlflow
+shap
+joblib
+evidently
+fastapi[all]
+uvicorn
